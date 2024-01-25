@@ -17,10 +17,10 @@ namespace MyEngine
 	void MaterialManager::BindMaterial(Scene* pScene, std::string materialName)
 	{
 		// Only change material if not already binded
-		//if (materialName == m_currMaterial)
-		//{
-		//	return;
-		//}
+		if (materialName == m_currMaterial)
+		{
+			return;
+		}
 
 		MaterialComponent* pMaterial = GetMaterialByName(pScene, materialName);
 
@@ -118,6 +118,8 @@ namespace MyEngine
 		pShader->SetUniformVec2("UVOffset", glm::vec2(0.0, 0.0));
 		pShader->SetUniformVec2("HeightMapOffset", glm::vec2(0.0, 0.0));
 		pShader->SetUniformInt("isEmissive", false);
+
+		m_currMaterial = "";
 	}
 
 	MaterialComponent* MaterialManager::GetMaterialByName(Scene* pScene, std::string materialName)

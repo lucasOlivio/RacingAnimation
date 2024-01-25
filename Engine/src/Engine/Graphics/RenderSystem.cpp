@@ -115,6 +115,10 @@ namespace MyEngine
 
 				pMaterialManager->BindMaterial(pScene, pMaterial->name);
 			}
+			else
+			{
+				pMaterialManager->UnbindMaterial();
+			}
 
 			m_RenderModel(pTiling, pTransform, pModel);
 		}
