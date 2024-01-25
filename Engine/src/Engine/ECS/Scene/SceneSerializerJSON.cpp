@@ -524,10 +524,10 @@ namespace MyEngine
 
             // Serialize rotation value
             Value rotationValueArray(kArrayType);
+            rotationValueArray.PushBack(rotationKeyFrame.value.w, allocator);
             rotationValueArray.PushBack(rotationKeyFrame.value.x, allocator);
             rotationValueArray.PushBack(rotationKeyFrame.value.y, allocator);
             rotationValueArray.PushBack(rotationKeyFrame.value.z, allocator);
-            rotationValueArray.PushBack(rotationKeyFrame.value.w, allocator);
             rotationKeyFrameObject.AddMember("value", rotationValueArray, allocator);
 
             rotationKeyFramesArray.PushBack(rotationKeyFrameObject, allocator);

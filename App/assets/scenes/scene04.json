@@ -1,0 +1,318 @@
+[
+    {
+        "camera": {
+            "upVector": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "position": [
+                -13.790032386779785,
+                22.08295249938965,
+                -163.77491760253906
+            ],
+            "orientation": [
+                0.5506471991539001,
+                0.0002587851195130497,
+                0.8347379565238953,
+                -0.00038659697747789323
+            ],
+            "distance": 0.5,
+            "height": 0.0,
+            "offsetTarget": 0.10000000149011612
+        },
+        "gridBroadphase": {
+            "lengthPerBox": [
+                4.0,
+                4.0,
+                4.0
+            ]
+        }
+    },
+    {
+        "tag": {
+            "name": "directionallight"
+        },
+        "transform": {
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "orientation": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": 0.0
+        },
+        "light": {
+            "distanceOffset": 0.0,
+            "atten": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "diffuse": [
+                0.8999999761581421,
+                0.8999999761581421,
+                0.8999999761581421,
+                1.0
+            ],
+            "direction": [
+                -0.0,
+                -1.0,
+                0.0,
+                1.0
+            ],
+            "directionOffset": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "params": [
+                2.0,
+                1.0,
+                1.0,
+                0.0
+            ],
+            "specular": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "status": 1
+        }
+    },
+    {
+        "tag": {
+            "name": "racetrack"
+        },
+        "transform": {
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "orientation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": 100.0
+        },
+        "model": {
+            "isActive": 1,
+            "doNotLight": 0,
+            "isWireframe": 0,
+            "useDefaultColor": 1,
+            "defaultColor": [
+                0.6000000238418579,
+                0.6000000238418579,
+                0.6000000238418579
+            ],
+            "useColorTexture": 0,
+            "material": "matracetrack",
+            "models": [
+                "FullTrack.ply"
+            ]
+        }
+    },
+    {
+        "tag": {
+            "name": "raceship1"
+        },
+        "transform": {
+            "position": [
+                -225.0,
+                21.0,
+                -70.0
+            ],
+            "orientation": [
+                -0.1736481785774231,
+                -5.063771624236324e-8,
+                0.9848077297210693,
+                -5.063771624236324e-8
+            ],
+            "scale": 0.004999999888241291
+        },
+        "model": {
+            "isActive": 1,
+            "doNotLight": 0,
+            "isWireframe": 0,
+            "useDefaultColor": 1,
+            "defaultColor": [
+                1.0,
+                0.0,
+                0.0
+            ],
+            "useColorTexture": 0,
+            "material": "",
+            "models": [
+                "spaceship.ply"
+            ]
+        },
+        "transformAnimation": {
+            "time": 0.0,
+            "positionKeyFrames": [
+                {
+                    "time": 0.0,
+                    "easeType": 2,
+                    "isKeyEvent": false,
+                    "value": [
+                        -225.0,
+                        21.0,
+                        -70.0
+                    ]
+                },
+                {
+                    "time": 1.0,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -26.0,
+                        21.0,
+                        -157.0
+                    ]
+                }
+            ],
+            "scaleKeyFrames": [],
+            "rotationKeyFrames": [
+                {
+                    "time": 0.0,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -0.1736481785774231,
+                        -5.063771624236324e-8,
+                        0.9848077297210693,
+                        -5.063771624236324e-8
+                    ]
+                },
+                {
+                    "time": 0.699999988079071,
+                    "easeType": 2,
+                    "isKeyEvent": false,
+                    "value": [
+                        -0.1736481785774231,
+                        -5.063771624236324e-8,
+                        0.9848077297210693,
+                        -5.063771624236324e-8
+                    ]
+                },
+                {
+                    "time": 1.2000000476837158,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -0.4226182699203491,
+                        5.8089199228561483e-8,
+                        0.9063077569007874,
+                        5.8089199228561483e-8
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "tag": {
+            "name": "raceship2"
+        },
+        "transform": {
+            "position": [
+                -237.0,
+                21.0,
+                -72.0
+            ],
+            "orientation": [
+                -0.2164396196603775,
+                -5.213613007981621e-8,
+                0.9762960076332092,
+                -5.213613007981621e-8
+            ],
+            "scale": 0.004999999888241291
+        },
+        "model": {
+            "isActive": 1,
+            "doNotLight": 0,
+            "isWireframe": 0,
+            "useDefaultColor": 1,
+            "defaultColor": [
+                1.0,
+                0.0,
+                0.0
+            ],
+            "useColorTexture": 0,
+            "material": "",
+            "models": [
+                "spaceship.ply"
+            ]
+        },
+        "transformAnimation": {
+            "time": 0.0,
+            "positionKeyFrames": [
+                {
+                    "time": 0.0,
+                    "easeType": 2,
+                    "isKeyEvent": false,
+                    "value": [
+                        -237.0,
+                        21.0,
+                        -72.0
+                    ]
+                },
+                {
+                    "time": 1.0,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -40.0,
+                        21.0,
+                        -160.0
+                    ]
+                }
+            ],
+            "scaleKeyFrames": [],
+            "rotationKeyFrames": [
+                {
+                    "time": 0.0,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -0.2164396196603775,
+                        -5.213613007981621e-8,
+                        0.9762960076332092,
+                        -5.213613007981621e-8
+                    ]
+                },
+                {
+                    "time": 0.699999988079071,
+                    "easeType": 2,
+                    "isKeyEvent": false,
+                    "value": [
+                        -0.2164396196603775,
+                        -5.213613007981621e-8,
+                        0.9762960076332092,
+                        -5.213613007981621e-8
+                    ]
+                },
+                {
+                    "time": 1.2000000476837158,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        0.4226182699203491,
+                        -2.114273733866412e-8,
+                        0.9063077569007874,
+                        -2.114273733866412e-8
+                    ]
+                }
+            ]
+        }
+    }
+]

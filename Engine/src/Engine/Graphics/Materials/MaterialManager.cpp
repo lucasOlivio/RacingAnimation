@@ -17,10 +17,10 @@ namespace MyEngine
 	void MaterialManager::BindMaterial(Scene* pScene, std::string materialName)
 	{
 		// Only change material if not already binded
-		if (materialName == m_currMaterial)
-		{
-			return;
-		}
+		//if (materialName == m_currMaterial)
+		//{
+		//	return;
+		//}
 
 		MaterialComponent* pMaterial = GetMaterialByName(pScene, materialName);
 

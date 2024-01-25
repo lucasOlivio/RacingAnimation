@@ -131,20 +131,20 @@ namespace MyEngine
         }
 
         ImGui::Text("Position");
-        ImGui::InputFloat("##PositionX", &pTransform->position.x);
-        ImGui::InputFloat("##PositionY", &pTransform->position.y);
-        ImGui::InputFloat("##PositionZ", &pTransform->position.z);
+        ImGui::InputFloat("X##PositionX", &pTransform->position.x);
+        ImGui::InputFloat("Y##PositionY", &pTransform->position.y);
+        ImGui::InputFloat("Z##PositionZ", &pTransform->position.z);
 
         Separator();
-        ImGui::Text("Rotation (Euler)");
+        ImGui::Text("Rotation");
         glm::vec3 euler = glm::degrees(glm::eulerAngles(pTransform->orientation));
-        if (ImGui::InputFloat("##RotationX", &euler.x)) {
+        if (ImGui::InputFloat("X##RotationX", &euler.x)) {
             pTransform->orientation = glm::quat(glm::radians(euler));
         }
-        if (ImGui::InputFloat("##RotationY", &euler.y)) {
+        if (ImGui::InputFloat("Y##RotationY", &euler.y)) {
             pTransform->orientation = glm::quat(glm::radians(euler));
         }
-        if (ImGui::InputFloat("##RotationZ", &euler.z)) {
+        if (ImGui::InputFloat("Z##RotationZ", &euler.z)) {
             pTransform->orientation = glm::quat(glm::radians(euler));
         }
 
@@ -393,6 +393,7 @@ namespace MyEngine
 
     void ComponentUI::m_TransformAnimationUI(Scene* pScene, Entity entityId)
     {
+        Separator();
         ImGui::Text("Animation Component:");
 
         TransformAnimationComponent* pTransformAnimation = pScene->Get<TransformAnimationComponent>(entityId);
@@ -409,15 +410,15 @@ namespace MyEngine
         for (size_t i = 0; i < pTransformAnimation->positionKeyFrames.size(); ++i)
         {
             PositionKeyFrame& keyFrame = pTransformAnimation->positionKeyFrames[i];
-            ImGui::InputFloat(("Time##Pos" + std::to_string(i)).c_str(), &keyFrame.time);
-            ImGui::InputFloat3(("Value##Pos" + std::to_string(i)).c_str(), &keyFrame.value[0]);
-            ImGui::InputInt(("EaseType##Pos" + std::to_string(i)).c_str(), reinterpret_cast<int*>(&keyFrame.easeType));
+            ImGui::InputFloat(("Time##AnimationPos" + std::to_string(i)).c_str(), &keyFrame.time);
+            ImGui::InputFloat3(("Position##AnimationPos" + std::to_string(i)).c_str(), &keyFrame.value[0]);
+            ImGui::InputInt(("EaseType##AnimationPos" + std::to_string(i)).c_str(), reinterpret_cast<int*>(&keyFrame.easeType));
 
             ImGui::Text("Is key event:");
-            ImGui::Checkbox(("##KeyEvent" + std::to_string(i)).c_str(), &keyFrame.isKeyEvent);
+            ImGui::Checkbox(("##AnimationPosKeyEvent" + std::to_string(i)).c_str(), &keyFrame.isKeyEvent);
 
             // Button to remove this keyframe
-            if (ImGui::Button(("Remove##Pos" + std::to_string(i)).c_str()))
+            if (ImGui::Button(("Remove##AnimationPos" + std::to_string(i)).c_str()))
             {
                 pTransformAnimation->positionKeyFrames.erase(pTransformAnimation->positionKeyFrames.begin() + i);
                 --i;
@@ -430,20 +431,22 @@ namespace MyEngine
             pTransformAnimation->positionKeyFrames.push_back(newKeyFrame);
         }
 
+        Separator();
+
         // Edit scale keyframes
         ImGui::Text("Scale Keyframes:");
         for (size_t i = 0; i < pTransformAnimation->scaleKeyFrames.size(); ++i)
         {
             ScaleKeyFrame& keyFrame = pTransformAnimation->scaleKeyFrames[i];
-            ImGui::InputFloat(("Time##Scale" + std::to_string(i)).c_str(), &keyFrame.time);
-            ImGui::InputFloat(("Value##Scale" + std::to_string(i)).c_str(), &keyFrame.value);
-            ImGui::InputInt(("EaseType##Scale" + std::to_string(i)).c_str(), reinterpret_cast<int*>(&keyFrame.easeType));
+            ImGui::InputFloat(("Time##AnimationScale" + std::to_string(i)).c_str(), &keyFrame.time);
+            ImGui::InputFloat(("Scale##AnimationScale" + std::to_string(i)).c_str(), &keyFrame.value);
+            ImGui::InputInt(("EaseType##AnimationScale" + std::to_string(i)).c_str(), reinterpret_cast<int*>(&keyFrame.easeType));
 
             ImGui::Text("Is key event:");
-            ImGui::Checkbox(("##KeyEvent" + std::to_string(i)).c_str(), &keyFrame.isKeyEvent);
+            ImGui::Checkbox(("##AnimationScaleKeyEvent" + std::to_string(i)).c_str(), &keyFrame.isKeyEvent);
 
             // Button to remove this keyframe
-            if (ImGui::Button(("Remove##Scale" + std::to_string(i)).c_str()))
+            if (ImGui::Button(("Remove##AnimationScale" + std::to_string(i)).c_str()))
             {
                 pTransformAnimation->scaleKeyFrames.erase(pTransformAnimation->scaleKeyFrames.begin() + i);
                 --i;
@@ -456,20 +459,34 @@ namespace MyEngine
             pTransformAnimation->scaleKeyFrames.push_back(newKeyFrame);
         }
 
+        Separator();
+
         // Edit rotation keyframes
         ImGui::Text("Rotation Keyframes:");
         for (size_t i = 0; i < pTransformAnimation->rotationKeyFrames.size(); ++i)
         {
             RotationKeyFrame& keyFrame = pTransformAnimation->rotationKeyFrames[i];
-            ImGui::InputFloat(("Time##Rot" + std::to_string(i)).c_str(), &keyFrame.time);
-            ImGui::InputFloat4(("Value##Rot" + std::to_string(i)).c_str(), &keyFrame.value[0]);
-            ImGui::InputInt(("EaseType##Rot" + std::to_string(i)).c_str(), reinterpret_cast<int*>(&keyFrame.easeType));
+            ImGui::InputFloat(("Time##AnimationRot" + std::to_string(i)).c_str(), &keyFrame.time);
+
+            ImGui::Text("Rotation");
+            glm::vec3 euler = glm::degrees(glm::eulerAngles(keyFrame.value));
+            if (ImGui::InputFloat(("X##AnimationRotationX" + std::to_string(i)).c_str(), &euler.x)) {
+                keyFrame.value = glm::quat(glm::radians(euler));
+            }
+            if (ImGui::InputFloat(("Y##AnimationRotationY" + std::to_string(i)).c_str(), &euler.y)) {
+                keyFrame.value = glm::quat(glm::radians(euler));
+            }
+            if (ImGui::InputFloat(("Z##AnimationRotationZ" + std::to_string(i)).c_str(), &euler.z)) {
+                keyFrame.value = glm::quat(glm::radians(euler));
+            }
+
+            ImGui::InputInt(("EaseType##AnimationRot" + std::to_string(i)).c_str(), reinterpret_cast<int*>(&keyFrame.easeType));
 
             ImGui::Text("Is key event:");
-            ImGui::Checkbox(("##KeyEvent" + std::to_string(i)).c_str(), &keyFrame.isKeyEvent);
+            ImGui::Checkbox(("##AnimationRotKeyEvent" + std::to_string(i)).c_str(), &keyFrame.isKeyEvent);
 
             // Button to remove this keyframe
-            if (ImGui::Button(("Remove##Rot" + std::to_string(i)).c_str()))
+            if (ImGui::Button(("Remove##AnimationRot" + std::to_string(i)).c_str()))
             {
                 pTransformAnimation->rotationKeyFrames.erase(pTransformAnimation->rotationKeyFrames.begin() + i);
                 --i;
@@ -481,6 +498,8 @@ namespace MyEngine
             RotationKeyFrame newKeyFrame;
             pTransformAnimation->rotationKeyFrames.push_back(newKeyFrame);
         }
+
+        Separator();
     }
 
     void ComponentUI::m_TilingUI(Scene* pScene, Entity entityId)

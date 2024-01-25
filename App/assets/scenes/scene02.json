@@ -7,15 +7,15 @@
                 0.0
             ],
             "position": [
-                57.746482849121094,
-                67.9336929321289,
-                47.32079315185547
+                71.11475372314453,
+                93.81816864013672,
+                193.45184326171875
             ],
             "orientation": [
-                0.9999988079071045,
-                0.0004999994998797774,
-                -0.001499999430961907,
-                7.499998559978849e-7
+                0.8021825551986694,
+                -0.2552099823951721,
+                0.5143833756446838,
+                0.1636488437652588
             ],
             "distance": 0.5,
             "height": 0.0,
@@ -89,184 +89,13 @@
         }
     },
     {
-        "texture": {
-            "fileName": "white.bmp",
-            "textureType": 0,
-            "vecTextures": []
-        },
-        "material": {
-            "name": "mattest",
-            "alphaTexture": "",
-            "colorTextures": [
-                "white.bmp"
-            ],
-            "colorTexturesRatios": [
-                1.0,
-                0.0,
-                0.0
-            ],
-            "cubeTexture": "",
-            "offset": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "currOffset": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "offsetHeightMap": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "currOffsetHeightMap": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "offsetMove": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "discardTexture": "",
-            "heightMapTexture": "",
-            "heightScale": 0.0,
-            "isEmissive": 0,
-            "normalTexture": "",
-            "specularTexture": "",
-            "useAlphaTexture": 0,
-            "useCubeTexture": 0,
-            "useDiscardTexture": 0,
-            "useHeightMap": 0,
-            "useNormalTexture": 0,
-            "useSpecularTexture": 0
-        }
-    },
-    {
-        "texture": {
-            "fileName": "transparent.bmp",
-            "textureType": 4,
-            "vecTextures": []
-        },
-        "material": {
-            "name": "mattesttransparent",
-            "alphaTexture": "transparent.bmp",
-            "colorTextures": [
-                "white.bmp"
-            ],
-            "colorTexturesRatios": [
-                1.0,
-                0.0,
-                0.0
-            ],
-            "cubeTexture": "",
-            "offset": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "currOffset": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "offsetHeightMap": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "currOffsetHeightMap": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "offsetMove": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "discardTexture": "",
-            "heightMapTexture": "",
-            "heightScale": 0.0,
-            "isEmissive": 0,
-            "normalTexture": "",
-            "specularTexture": "",
-            "useAlphaTexture": 1,
-            "useCubeTexture": 0,
-            "useDiscardTexture": 0,
-            "useHeightMap": 0,
-            "useNormalTexture": 0,
-            "useSpecularTexture": 0
-        }
-    },
-    {
-        "texture": {
-            "fileName": "red.bmp",
-            "textureType": 0,
-            "vecTextures": []
-        },
-        "material": {
-            "name": "mattestred",
-            "alphaTexture": "",
-            "colorTextures": [
-                "red.bmp"
-            ],
-            "colorTexturesRatios": [
-                1.0,
-                0.0,
-                0.0
-            ],
-            "cubeTexture": "",
-            "offset": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "currOffset": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "offsetHeightMap": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "currOffsetHeightMap": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "offsetMove": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "discardTexture": "",
-            "heightMapTexture": "",
-            "heightScale": 0.0,
-            "isEmissive": 0,
-            "normalTexture": "",
-            "specularTexture": "",
-            "useAlphaTexture": 0,
-            "useCubeTexture": 0,
-            "useDiscardTexture": 0,
-            "useHeightMap": 0,
-            "useNormalTexture": 0,
-            "useSpecularTexture": 0
-        }
-    },
-    {
         "tag": {
-            "name": "test"
+            "name": "racetrack"
         },
         "transform": {
             "position": [
-                60.0,
-                75.0,
+                0.0,
+                0.0,
                 0.0
             ],
             "orientation": [
@@ -275,65 +104,34 @@
                 0.0,
                 0.0
             ],
-            "scale": 1.0
-        },
-        "movement": {
-            "velocity": [
-                -1.0,
-                -1.0,
-                0.0
-            ],
-            "acceleration": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "maxSpeed": 5.0,
-            "drag": 0.0
-        },
-        "rotation": {
-            "velocity": [
-                0.0,
-                0.0,
-                100.0
-            ],
-            "acceleration": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "maxSpeed": 100.0,
-            "drag": 0.0
+            "scale": 100.0
         },
         "model": {
             "isActive": 1,
             "doNotLight": 0,
             "isWireframe": 0,
-            "useDefaultColor": false,
-            "defaultColor": [1.0, 1.0, 1.0],
-            "useColorTexture": 1,
-            "material": "mattest",
+            "useDefaultColor": 1,
+            "defaultColor": [
+                0.6000000238418579,
+                0.6000000238418579,
+                0.6000000238418579
+            ],
+            "useColorTexture": 0,
+            "material": "matracetrack",
             "models": [
-                "cube.ply"
+                "FullTrack.ply"
             ]
-        },
-        "rigidBody": {
-            "bodyType": 1,
-            "shapeType": 1
-        },
-        "sphereCollider": {
-            "radius": 1.0
         }
     },
     {
         "tag": {
-            "name": "test3"
+            "name": "raceship1"
         },
         "transform": {
             "position": [
-                3.0,
-                3.0,
-                0.0
+                20.0,
+                20.0,
+                170.0
             ],
             "orientation": [
                 1.0,
@@ -341,125 +139,22 @@
                 0.0,
                 0.0
             ],
-            "scale": 1.0
-        },
-        "movement": {
-            "velocity": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "acceleration": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "maxSpeed": 0.0,
-            "drag": 0.0
-        },
-        "parent": {
-            "parentId": 5
+            "scale": 0.004999999888241291
         },
         "model": {
             "isActive": 1,
             "doNotLight": 0,
             "isWireframe": 0,
-            "useDefaultColor": false,
-            "defaultColor": [1.0, 1.0, 1.0],
-            "useColorTexture": 1,
-            "material": "mattest",
-            "models": [
-                "sphere.obj"
-            ]
-        },
-        "rigidBody": {
-            "bodyType": 1,
-            "shapeType": 1
-        },
-        "sphereCollider": {
-            "radius": 1.0
-        }
-    },
-    {
-        "tag": {
-            "name": "test2"
-        },
-        "transform": {
-            "position": [
-                50.0,
-                65.0,
-                0.0
-            ],
-            "orientation": [
+            "useDefaultColor": 1,
+            "defaultColor": [
                 1.0,
                 0.0,
-                0.0,
                 0.0
             ],
-            "scale": 1.0
-        },
-        "movement": {
-            "velocity": [
-                1.0,
-                1.0,
-                0.0
-            ],
-            "acceleration": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "maxSpeed": 5.0,
-            "drag": 0.0
-        },
-        "model": {
-            "isActive": 1,
-            "doNotLight": 0,
-            "isWireframe": 0,
-            "useDefaultColor": false,
-            "defaultColor": [1.0, 1.0, 1.0],
-            "useColorTexture": 1,
-            "material": "mattesttransparent",
+            "useColorTexture": 0,
+            "material": "",
             "models": [
-                "sphere.obj"
-            ]
-        },
-        "rigidBody": {
-            "bodyType": 1,
-            "shapeType": 1
-        },
-        "sphereCollider": {
-            "radius": 1.0
-        }
-    },
-    {
-        "tag": {
-            "name": "testground"
-        },
-        "transform": {
-            "position": [
-                50.0,
-                10.0,
-                0.0
-            ],
-            "orientation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scale": 50.0
-        },
-        "model": {
-            "isActive": 1,
-            "doNotLight": 0,
-            "isWireframe": 0,
-            "useDefaultColor": false,
-            "defaultColor": [1.0, 1.0, 1.0],
-            "useColorTexture": 1,
-            "material": "mattestred",
-            "models": [
-                "cube.ply"
+                "spaceship.ply"
             ]
         },
         "transformAnimation": {
@@ -467,31 +162,101 @@
             "positionKeyFrames": [
                 {
                     "time": 0.0,
-                    "easeType": 3,
-                    "isKeyEvent": true,
+                    "easeType": 1,
+                    "isKeyEvent": false,
                     "value": [
-                        50.0,
-                        10.0,
-                        0.0
+                        20.0,
+                        20.0,
+                        170.0
+                    ]
+                },
+                {
+                    "time": 0.25,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        0.0,
+                        20.0,
+                        185.0
+                    ]
+                },
+                {
+                    "time": 0.5,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -30.0,
+                        20.0,
+                        190.0
+                    ]
+                },
+                {
+                    "time": 0.75,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -55.0,
+                        20.0,
+                        190.0
+                    ]
+                },
+                {
+                    "time": 1.0,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -85.0,
+                        20.0,
+                        175.0
+                    ]
+                },
+                {
+                    "time": 1.25,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -110.0,
+                        20.0,
+                        150.0
+                    ]
+                },
+                {
+                    "time": 1.5,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -110.0,
+                        21.0,
+                        120.0
+                    ]
+                },
+                {
+                    "time": 1.75,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -95.0,
+                        20.0,
+                        85.0
                     ]
                 },
                 {
                     "time": 2.0,
-                    "easeType": 2,
-                    "isKeyEvent": true,
+                    "easeType": 0,
+                    "isKeyEvent": false,
                     "value": [
-                        55.0,
-                        10.0,
-                        0.0
+                        -65.0,
+                        20.0,
+                        30.0
                     ]
                 },
                 {
-                    "time": 3.0,
-                    "easeType": 1,
-                    "isKeyEvent": true,
+                    "time": 2.25,
+                    "easeType": 0,
+                    "isKeyEvent": false,
                     "value": [
-                        65.0,
-                        10.0,
+                        -40.0,
+                        20.0,
                         0.0
                     ]
                 }
@@ -500,24 +265,79 @@
             "rotationKeyFrames": [
                 {
                     "time": 0.0,
-                    "easeType": 3,
+                    "easeType": 0,
                     "isKeyEvent": false,
                     "value": [
-                        0.0,
-                        0.0,
                         1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                {
+                    "time": 0.25,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        0.9914448857307434,
+                        0.0,
+                        -0.13052619993686676,
+                        0.0
+                    ]
+                },
+                {
+                    "time": 0.5,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        0.9914448857307434,
+                        0.0,
+                        -0.13052619993686676,
+                        0.0
+                    ]
+                },
+                {
+                    "time": 0.75,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        0.9816271662712097,
+                        0.0,
+                        -0.19080901145935059,
                         0.0
                     ]
                 },
                 {
                     "time": 1.0,
-                    "easeType": 3,
+                    "easeType": 0,
                     "isKeyEvent": false,
                     "value": [
+                        0.972369909286499,
                         0.0,
-                        0.7070000171661377,
-                        0.7070000171661377,
+                        -0.23344536125659943,
                         0.0
+                    ]
+                },
+                {
+                    "time": 1.25,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        0.7933533191680908,
+                        0.0,
+                        -0.6087614297866821,
+                        0.0
+                    ]
+                },
+                {
+                    "time": 1.5,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        0.5444943308830261,
+                        1.2862958698178772e-8,
+                        -0.8387645483016968,
+                        -1.2862958698178772e-8
                     ]
                 },
                 {
@@ -525,10 +345,10 @@
                     "easeType": 0,
                     "isKeyEvent": false,
                     "value": [
-                        0.7070000171661377,
-                        0.0,
-                        0.7070000171661377,
-                        0.0
+                        -0.4617486000061035,
+                        5.89561466313171e-8,
+                        0.8870108127593994,
+                        5.89561466313171e-8
                     ]
                 }
             ]
@@ -536,125 +356,233 @@
     },
     {
         "tag": {
-            "name": "test4"
+            "name": "raceship2"
         },
         "transform": {
             "position": [
-                0.0,
-                3.0,
-                0.0
+                27.0,
+                20.0,
+                165.0
             ],
             "orientation": [
-                1.0,
+                0.9961947202682495,
                 0.0,
-                0.0,
+                0.08715573698282242,
                 0.0
             ],
-            "scale": 1.0
-        },
-        "movement": {
-            "velocity": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "acceleration": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "maxSpeed": 0.0,
-            "drag": 0.0
-        },
-        "parent": {
-            "parentId": 5
+            "scale": 0.004999999888241291
         },
         "model": {
             "isActive": 1,
             "doNotLight": 0,
             "isWireframe": 0,
-            "useDefaultColor": false,
-            "defaultColor": [1.0, 1.0, 1.0],
-            "useColorTexture": 1,
-            "material": "mattest",
-            "models": [
-                "sphere.obj"
-            ]
-        },
-        "tiling": {
-            "axis": [
-                5.0,
-                1.0,
-                1.0
-            ],
-            "offset": [
-                2.0,
-                0.0,
-                0.0
-            ]
-        },
-        "rigidBody": {
-            "bodyType": 1,
-            "shapeType": 1
-        },
-        "sphereCollider": {
-            "radius": 1.0
-        }
-    },
-    {
-        "tag": {
-            "name": "test5"
-        },
-        "transform": {
-            "position": [
-                0.0,
-                -3.0,
-                0.0
-            ],
-            "orientation": [
+            "useDefaultColor": 1,
+            "defaultColor": [
                 1.0,
                 0.0,
-                0.0,
                 0.0
             ],
-            "scale": 1.0
-        },
-        "movement": {
-            "velocity": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "acceleration": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "maxSpeed": 0.0,
-            "drag": 0.0
-        },
-        "parent": {
-            "parentId": 7
-        },
-        "model": {
-            "isActive": 1,
-            "doNotLight": 0,
-            "isWireframe": 0,
-            "useDefaultColor": false,
-            "defaultColor": [1.0, 1.0, 1.0],
-            "useColorTexture": 1,
-            "material": "mattest",
+            "useColorTexture": 0,
+            "material": "",
             "models": [
-                "sphere.obj",
-                "cube.ply"
+                "spaceship.ply"
             ]
         },
-        "rigidBody": {
-            "bodyType": 1,
-            "shapeType": 1
-        },
-        "sphereCollider": {
-            "radius": 1.0
+        "transformAnimation": {
+            "time": 0.0,
+            "positionKeyFrames": [
+                {
+                    "time": 0.0,
+                    "easeType": 1,
+                    "isKeyEvent": false,
+                    "value": [
+                        27.0,
+                        20.0,
+                        165.0
+                    ]
+                },
+                {
+                    "time": 0.25,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        10.0,
+                        20.0,
+                        180.0
+                    ]
+                },
+                {
+                    "time": 0.5,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -20.0,
+                        20.0,
+                        192.0
+                    ]
+                },
+                {
+                    "time": 0.75,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -45.0,
+                        20.0,
+                        190.0
+                    ]
+                },
+                {
+                    "time": 1.0,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -78.0,
+                        20.0,
+                        176.0
+                    ]
+                },
+                {
+                    "time": 1.25,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -105.0,
+                        20.0,
+                        147.0
+                    ]
+                },
+                {
+                    "time": 1.5,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -104.0,
+                        21.0,
+                        120.0
+                    ]
+                },
+                {
+                    "time": 1.75,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -85.0,
+                        20.0,
+                        70.0
+                    ]
+                },
+                {
+                    "time": 2.0,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -58.0,
+                        20.0,
+                        28.0
+                    ]
+                },
+                {
+                    "time": 2.25,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -30.0,
+                        20.0,
+                        0.0
+                    ]
+                }
+            ],
+            "scaleKeyFrames": [],
+            "rotationKeyFrames": [
+                {
+                    "time": 0.0,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        0.9961947202682495,
+                        0.0,
+                        0.08715573698282242,
+                        0.0
+                    ]
+                },
+                {
+                    "time": 0.25,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        0.9969173073768616,
+                        0.0,
+                        -0.07845909893512726,
+                        0.0
+                    ]
+                },
+                {
+                    "time": 0.5,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        0.9762960076332092,
+                        0.0,
+                        -0.2164396196603775,
+                        0.0
+                    ]
+                },
+                {
+                    "time": 0.75,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        0.9914448857307434,
+                        0.0,
+                        -0.13052619993686676,
+                        0.0
+                    ]
+                },
+                {
+                    "time": 1.0,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        0.9762960076332092,
+                        0.0,
+                        -0.2164396196603775,
+                        0.0
+                    ]
+                },
+                {
+                    "time": 1.25,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        0.7933533191680908,
+                        0.0,
+                        -0.6087614297866821,
+                        0.0
+                    ]
+                },
+                {
+                    "time": 1.5,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        0.5,
+                        1.5999479074935152e-8,
+                        -0.8660253882408142,
+                        -1.5999479074935152e-8
+                    ]
+                },
+                {
+                    "time": 2.0,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        -0.4226182699203491,
+                        5.8089199228561483e-8,
+                        0.9063077569007874,
+                        5.8089199228561483e-8
+                    ]
+                }
+            ]
         }
     }
 ]

@@ -7,15 +7,15 @@
                 0.0
             ],
             "position": [
-                57.746482849121094,
-                67.9336929321289,
-                47.32079315185547
+                33.173038482666016,
+                27.092327117919922,
+                180.69888305664063
             ],
             "orientation": [
-                0.9999988079071045,
-                0.0004999994998797774,
-                -0.001499999430961907,
-                7.499998559978849e-7
+                0.9906131625175476,
+                -0.0849195346236229,
+                -0.10672666877508163,
+                -0.009146885015070438
             ],
             "distance": 0.5,
             "height": 0.0,
@@ -89,184 +89,13 @@
         }
     },
     {
-        "texture": {
-            "fileName": "white.bmp",
-            "textureType": 0,
-            "vecTextures": []
-        },
-        "material": {
-            "name": "mattest",
-            "alphaTexture": "",
-            "colorTextures": [
-                "white.bmp"
-            ],
-            "colorTexturesRatios": [
-                1.0,
-                0.0,
-                0.0
-            ],
-            "cubeTexture": "",
-            "offset": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "currOffset": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "offsetHeightMap": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "currOffsetHeightMap": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "offsetMove": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "discardTexture": "",
-            "heightMapTexture": "",
-            "heightScale": 0.0,
-            "isEmissive": 0,
-            "normalTexture": "",
-            "specularTexture": "",
-            "useAlphaTexture": 0,
-            "useCubeTexture": 0,
-            "useDiscardTexture": 0,
-            "useHeightMap": 0,
-            "useNormalTexture": 0,
-            "useSpecularTexture": 0
-        }
-    },
-    {
-        "texture": {
-            "fileName": "transparent.bmp",
-            "textureType": 4,
-            "vecTextures": []
-        },
-        "material": {
-            "name": "mattesttransparent",
-            "alphaTexture": "transparent.bmp",
-            "colorTextures": [
-                "white.bmp"
-            ],
-            "colorTexturesRatios": [
-                1.0,
-                0.0,
-                0.0
-            ],
-            "cubeTexture": "",
-            "offset": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "currOffset": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "offsetHeightMap": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "currOffsetHeightMap": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "offsetMove": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "discardTexture": "",
-            "heightMapTexture": "",
-            "heightScale": 0.0,
-            "isEmissive": 0,
-            "normalTexture": "",
-            "specularTexture": "",
-            "useAlphaTexture": 1,
-            "useCubeTexture": 0,
-            "useDiscardTexture": 0,
-            "useHeightMap": 0,
-            "useNormalTexture": 0,
-            "useSpecularTexture": 0
-        }
-    },
-    {
-        "texture": {
-            "fileName": "red.bmp",
-            "textureType": 0,
-            "vecTextures": []
-        },
-        "material": {
-            "name": "mattestred",
-            "alphaTexture": "",
-            "colorTextures": [
-                "red.bmp"
-            ],
-            "colorTexturesRatios": [
-                1.0,
-                0.0,
-                0.0
-            ],
-            "cubeTexture": "",
-            "offset": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "currOffset": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "offsetHeightMap": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "currOffsetHeightMap": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "offsetMove": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "discardTexture": "",
-            "heightMapTexture": "",
-            "heightScale": 0.0,
-            "isEmissive": 0,
-            "normalTexture": "",
-            "specularTexture": "",
-            "useAlphaTexture": 0,
-            "useCubeTexture": 0,
-            "useDiscardTexture": 0,
-            "useHeightMap": 0,
-            "useNormalTexture": 0,
-            "useSpecularTexture": 0
-        }
-    },
-    {
         "tag": {
-            "name": "test"
+            "name": "racetrack"
         },
         "transform": {
             "position": [
-                60.0,
-                75.0,
+                0.0,
+                0.0,
                 0.0
             ],
             "orientation": [
@@ -275,192 +104,7 @@
                 0.0,
                 0.0
             ],
-            "scale": 1.0
-        },
-        "movement": {
-            "velocity": [
-                -1.0,
-                -1.0,
-                0.0
-            ],
-            "acceleration": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "maxSpeed": 5.0,
-            "drag": 0.0
-        },
-        "rotation": {
-            "velocity": [
-                0.0,
-                0.0,
-                100.0
-            ],
-            "acceleration": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "maxSpeed": 100.0,
-            "drag": 0.0
-        },
-        "model": {
-            "isActive": 1,
-            "doNotLight": 0,
-            "isWireframe": 0,
-            "useDefaultColor": 0,
-            "defaultColor": [
-                1.0,
-                1.0,
-                1.0
-            ],
-            "useColorTexture": 1,
-            "material": "mattest",
-            "models": [
-                "cube.ply"
-            ]
-        },
-        "rigidBody": {
-            "bodyType": 1,
-            "shapeType": 1
-        },
-        "sphereCollider": {
-            "radius": 1.0
-        }
-    },
-    {
-        "tag": {
-            "name": "test3"
-        },
-        "transform": {
-            "position": [
-                3.0,
-                3.0,
-                0.0
-            ],
-            "orientation": [
-                1.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "scale": 1.0
-        },
-        "movement": {
-            "velocity": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "acceleration": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "maxSpeed": 0.0,
-            "drag": 0.0
-        },
-        "parent": {
-            "parentId": 5
-        },
-        "model": {
-            "isActive": 1,
-            "doNotLight": 0,
-            "isWireframe": 0,
-            "useDefaultColor": 0,
-            "defaultColor": [
-                1.0,
-                1.0,
-                1.0
-            ],
-            "useColorTexture": 1,
-            "material": "mattest",
-            "models": [
-                "sphere.obj"
-            ]
-        },
-        "rigidBody": {
-            "bodyType": 1,
-            "shapeType": 1
-        },
-        "sphereCollider": {
-            "radius": 1.0
-        }
-    },
-    {
-        "tag": {
-            "name": "test2"
-        },
-        "transform": {
-            "position": [
-                50.0,
-                65.0,
-                0.0
-            ],
-            "orientation": [
-                1.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "scale": 1.0
-        },
-        "movement": {
-            "velocity": [
-                1.0,
-                1.0,
-                0.0
-            ],
-            "acceleration": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "maxSpeed": 5.0,
-            "drag": 0.0
-        },
-        "model": {
-            "isActive": 1,
-            "doNotLight": 0,
-            "isWireframe": 0,
-            "useDefaultColor": 0,
-            "defaultColor": [
-                1.0,
-                1.0,
-                1.0
-            ],
-            "useColorTexture": 1,
-            "material": "mattesttransparent",
-            "models": [
-                "sphere.obj"
-            ]
-        },
-        "rigidBody": {
-            "bodyType": 1,
-            "shapeType": 1
-        },
-        "sphereCollider": {
-            "radius": 1.0
-        }
-    },
-    {
-        "tag": {
-            "name": "testground"
-        },
-        "transform": {
-            "position": [
-                50.0,
-                10.0,
-                0.0
-            ],
-            "orientation": [
-                0.0,
-                0.0,
-                1.0,
-                0.0
-            ],
-            "scale": 50.0
+            "scale": 100.0
         },
         "model": {
             "isActive": 1,
@@ -468,14 +112,49 @@
             "isWireframe": 0,
             "useDefaultColor": 1,
             "defaultColor": [
-                0.0,
-                0.0,
-                1.0
+                0.6000000238418579,
+                0.6000000238418579,
+                0.6000000238418579
             ],
-            "useColorTexture": 1,
-            "material": "mattestred",
+            "useColorTexture": 0,
+            "material": "matracetrack",
             "models": [
-                "cube.ply"
+                "FullTrack.ply"
+            ]
+        }
+    },
+    {
+        "tag": {
+            "name": "raceship1"
+        },
+        "transform": {
+            "position": [
+                60.0,
+                20.0,
+                50.0
+            ],
+            "orientation": [
+                0.7660444378852844,
+                0.0,
+                0.6427875757217407,
+                0.0
+            ],
+            "scale": 0.004999999888241291
+        },
+        "model": {
+            "isActive": 1,
+            "doNotLight": 0,
+            "isWireframe": 0,
+            "useDefaultColor": 1,
+            "defaultColor": [
+                1.0,
+                0.0,
+                0.0
+            ],
+            "useColorTexture": 0,
+            "material": "",
+            "models": [
+                "spaceship.ply"
             ]
         },
         "transformAnimation": {
@@ -483,32 +162,42 @@
             "positionKeyFrames": [
                 {
                     "time": 0.0,
-                    "easeType": 3,
-                    "isKeyEvent": true,
-                    "value": [
-                        50.0,
-                        10.0,
-                        0.0
-                    ]
-                },
-                {
-                    "time": 2.0,
-                    "easeType": 2,
-                    "isKeyEvent": true,
-                    "value": [
-                        55.0,
-                        10.0,
-                        0.0
-                    ]
-                },
-                {
-                    "time": 3.0,
                     "easeType": 1,
+                    "isKeyEvent": false,
+                    "value": [
+                        60.0,
+                        20.0,
+                        50.0
+                    ]
+                },
+                {
+                    "time": 1.0,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        40.0,
+                        20.0,
+                        150.0
+                    ]
+                },
+                {
+                    "time": 1.25,
+                    "easeType": 0,
                     "isKeyEvent": true,
                     "value": [
-                        65.0,
-                        10.0,
-                        0.0
+                        20.0,
+                        20.0,
+                        175.0
+                    ]
+                },
+                {
+                    "time": 1.5,
+                    "easeType": 0,
+                    "isKeyEvent": true,
+                    "value": [
+                        5.0,
+                        20.0,
+                        180.0
                     ]
                 }
             ],
@@ -516,35 +205,35 @@
             "rotationKeyFrames": [
                 {
                     "time": 0.0,
-                    "easeType": 3,
+                    "easeType": 1,
                     "isKeyEvent": false,
                     "value": [
+                        0.7660444378852844,
                         0.0,
-                        1.0,
+                        0.6427875757217407,
+                        0.0
+                    ]
+                },
+                {
+                    "time": 0.75,
+                    "easeType": 1,
+                    "isKeyEvent": false,
+                    "value": [
+                        0.7547094821929932,
                         0.0,
+                        0.6560591459274292,
                         0.0
                     ]
                 },
                 {
                     "time": 1.0,
-                    "easeType": 3,
+                    "easeType": 1,
                     "isKeyEvent": false,
                     "value": [
-                        0.7070000171661377,
-                        0.7070000171661377,
+                        1.0,
+                        0.0,
                         0.0,
                         0.0
-                    ]
-                },
-                {
-                    "time": 2.0,
-                    "easeType": 0,
-                    "isKeyEvent": false,
-                    "value": [
-                        0.0,
-                        0.7070000171661377,
-                        0.0,
-                        0.7070000171661377
                     ]
                 }
             ]
@@ -552,133 +241,118 @@
     },
     {
         "tag": {
-            "name": "test4"
+            "name": "raceship1"
         },
         "transform": {
             "position": [
-                0.0,
-                3.0,
-                0.0
+                70.0,
+                20.0,
+                50.0
             ],
             "orientation": [
-                1.0,
+                0.7660444378852844,
                 0.0,
-                0.0,
+                0.6427875757217407,
                 0.0
             ],
-            "scale": 1.0
-        },
-        "movement": {
-            "velocity": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "acceleration": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "maxSpeed": 0.0,
-            "drag": 0.0
-        },
-        "parent": {
-            "parentId": 5
+            "scale": 0.004999999888241291
         },
         "model": {
             "isActive": 1,
             "doNotLight": 0,
             "isWireframe": 0,
-            "useDefaultColor": 0,
+            "useDefaultColor": 1,
             "defaultColor": [
                 1.0,
-                1.0,
-                1.0
+                0.0,
+                0.0
             ],
-            "useColorTexture": 1,
-            "material": "mattest",
+            "useColorTexture": 0,
+            "material": "",
             "models": [
-                "sphere.obj"
+                "spaceship.ply"
             ]
         },
-        "tiling": {
-            "axis": [
-                5.0,
-                1.0,
-                1.0
+        "transformAnimation": {
+            "time": 0.0,
+            "positionKeyFrames": [
+                {
+                    "time": 0.0,
+                    "easeType": 1,
+                    "isKeyEvent": false,
+                    "value": [
+                        70.0,
+                        20.0,
+                        50.0
+                    ]
+                },
+                {
+                    "time": 1.0,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": [
+                        50.0,
+                        20.0,
+                        145.0
+                    ]
+                },
+                {
+                    "time": 1.25,
+                    "easeType": 0,
+                    "isKeyEvent": true,
+                    "value": [
+                        25.0,
+                        20.0,
+                        170.0
+                    ]
+                },
+                {
+                    "time": 1.5,
+                    "easeType": 0,
+                    "isKeyEvent": true,
+                    "value": [
+                        15.0,
+                        20.0,
+                        180.0
+                    ]
+                }
             ],
-            "offset": [
-                2.0,
-                0.0,
-                0.0
+            "scaleKeyFrames": [],
+            "rotationKeyFrames": [
+                {
+                    "time": 0.0,
+                    "easeType": 1,
+                    "isKeyEvent": false,
+                    "value": [
+                        0.7660444378852844,
+                        0.0,
+                        0.6427875757217407,
+                        0.0
+                    ]
+                },
+                {
+                    "time": 0.75,
+                    "easeType": 1,
+                    "isKeyEvent": false,
+                    "value": [
+                        0.7547094821929932,
+                        0.0,
+                        0.6560591459274292,
+                        0.0
+                    ]
+                },
+                {
+                    "time": 1.0,
+                    "easeType": 1,
+                    "isKeyEvent": false,
+                    "value": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                }
             ]
-        },
-        "rigidBody": {
-            "bodyType": 1,
-            "shapeType": 1
-        },
-        "sphereCollider": {
-            "radius": 1.0
-        }
-    },
-    {
-        "tag": {
-            "name": "test5"
-        },
-        "transform": {
-            "position": [
-                0.0,
-                -3.0,
-                0.0
-            ],
-            "orientation": [
-                1.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "scale": 1.0
-        },
-        "movement": {
-            "velocity": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "acceleration": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "maxSpeed": 0.0,
-            "drag": 0.0
-        },
-        "parent": {
-            "parentId": 7
-        },
-        "model": {
-            "isActive": 1,
-            "doNotLight": 0,
-            "isWireframe": 0,
-            "useDefaultColor": 0,
-            "defaultColor": [
-                1.0,
-                1.0,
-                1.0
-            ],
-            "useColorTexture": 1,
-            "material": "mattest",
-            "models": [
-                "sphere.obj",
-                "cube.ply"
-            ]
-        },
-        "rigidBody": {
-            "bodyType": 1,
-            "shapeType": 1
-        },
-        "sphereCollider": {
-            "radius": 1.0
         }
     }
 ]

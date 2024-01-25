@@ -11,7 +11,7 @@
 #include "Engine/Utils/TransformUtils.h"
 
 #define DEFAULT_MOUSE_SENSITIVITY 0.001f
-#define DEFAULT_CAMERA_SPEED 150.0f
+#define DEFAULT_CAMERA_SPEED 100.0f
 
 namespace MyEngine
 {

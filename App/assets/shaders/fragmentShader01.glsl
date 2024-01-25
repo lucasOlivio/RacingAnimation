@@ -94,10 +94,14 @@ void main()
 		return;
 	}
 
+	// Use model vertex as default
+	vec4 vertexRGBA = colour;
+	vertexRGBA.a = 1.0;
+
 	if (bUseDefaultColor)
 	{
-		outputColour = vec4(defaultColor, 1.0f);
-		return;
+		// Use default color
+		vertexRGBA = vec4(defaultColor, 1.0f);
 	}
 
 	if (bUseDebugColour)
@@ -105,10 +109,6 @@ void main()
 		outputColour = debugColourRGBA;
 		return;
 	}
-
-	// Use model vertex as default
-	vec4 vertexRGBA = colour;
-	vertexRGBA.a = 1.0;
 
 	if (bUseAlphaTexture)
 	{
