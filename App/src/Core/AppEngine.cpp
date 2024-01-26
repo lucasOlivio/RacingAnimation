@@ -4,8 +4,7 @@
 #include "Engine/ECS/System/SystemBuilder.h"
 
 // Custom app systems
-#include "Gameplay/ChangeStateSystem.h"
-#include "Gameplay/ChangeSceneSystem.h"
+#include "Gameplay/AnimationCommandsSystem.h"
 
 // Here we use to include all we need for this specific app details to work
 namespace MyEngine
@@ -17,8 +16,7 @@ namespace MyEngine
 		Engine::Init();
 
 		// Register custom app systems
-		SystemBuilder::RegisterSystem("ChangeStateSystem", []() { return new ChangeStateSystem; });
-		SystemBuilder::RegisterSystem("ChangeSceneSystem", []() { return new ChangeSceneSystem; });
+		SystemBuilder::RegisterSystem("AnimationCommandsSystem", []() { return new AnimationCommandsSystem; });
 
 		GameStateComponent* pStates = CoreLocator::GetGameState();
 
@@ -34,8 +32,7 @@ namespace MyEngine
 		pStates->mainSystems.push_back("LightSystem");
 		pStates->mainSystems.push_back("AnimationSystem");
 
-		pStates->mainSystems.push_back("ChangeStateSystem");
-		pStates->mainSystems.push_back("ChangeSceneSystem");
+		pStates->mainSystems.push_back("AnimationCommandsSystem");
 
 		// TODO: This could come from a config file
 		// TODO: Could this be categorized to avoid having to put all in the config?
@@ -51,10 +48,10 @@ namespace MyEngine
 			"RotationSystem",
 			"GravitySystem",
 			"GridBroadPhaseSystem",
-			"CollisionSystem"
+			"CollisionSystem",
 			#ifdef DEBUG
 			// Debug
-			,"DebugSystem",
+			"DebugSystem",
 			"DrawGridSystem",
 			"DrawCollisionSystem"
 			#endif

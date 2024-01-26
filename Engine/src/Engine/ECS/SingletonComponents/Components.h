@@ -114,6 +114,15 @@ namespace MyEngine
 		std::vector<Entity> entities;
 	};
 
+	struct AnimationControllerComponent
+	{
+		float timeLastKeyFrame = 0.0f;
+		float timeFirstKeyFrame = FLT_MAX;
+
+		float speed = 1.0f;
+		bool reset = false;
+	};
+
 	struct FrameCounterComponent
 	{
 		int frameCount;

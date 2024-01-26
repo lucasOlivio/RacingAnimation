@@ -98,8 +98,8 @@
             "vecTextures": [
                 "cubetexture/TropicalSunnyDayLeft2048.bmp",
                 "cubetexture/TropicalSunnyDayRight2048.bmp",
-                "cubetexture/TropicalSunnyDayUp2048.bmp",
                 "cubetexture/TropicalSunnyDayDown2048.bmp",
+                "cubetexture/TropicalSunnyDayUp2048.bmp",
                 "cubetexture/TropicalSunnyDayFront2048.bmp",
                 "cubetexture/TropicalSunnyDayBack2048.bmp"
             ]

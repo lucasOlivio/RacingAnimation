@@ -7,6 +7,7 @@ namespace MyEngine
     CameraComponent* GraphicsLocator::m_pCamera = new CameraComponent();
     TransparentEntitiesComponent* GraphicsLocator::m_pTransparentEntities = new TransparentEntitiesComponent();
     WindowComponent* GraphicsLocator::m_pWindow = new WindowComponent();
+    AnimationControllerComponent* GraphicsLocator::m_pAnimationController = new AnimationControllerComponent();
 
     CameraComponent* GraphicsLocator::GetCamera()
     {
@@ -21,6 +22,11 @@ namespace MyEngine
     WindowComponent* GraphicsLocator::GetWindow()
     {
         return m_pWindow;
+    }
+
+    AnimationControllerComponent* GraphicsLocator::GetAnimationController()
+    {
+        return m_pAnimationController;
     }
 
     void GraphicsLocator::SetCamera(CameraComponent* pCamera)
@@ -41,10 +47,17 @@ namespace MyEngine
         m_pWindow = pWindow;
     }
 
+    void GraphicsLocator::SetAnimationController(AnimationControllerComponent* pAnimationController)
+    {
+        delete m_pAnimationController;
+        m_pAnimationController = pAnimationController;
+    }
+
     void GraphicsLocator::Clear()
     {
         delete m_pCamera;
         delete m_pTransparentEntities;
         delete m_pWindow;
+        delete m_pAnimationController;
     }
 }

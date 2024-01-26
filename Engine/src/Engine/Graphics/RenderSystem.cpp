@@ -102,23 +102,23 @@ namespace MyEngine
 			}
 
 			// Bind material
-			//MaterialComponent* pMaterial = pMaterialManager->GetMaterialByName(pScene, 
-			//																   pModel->material);
-			//if (pMaterial)
-			//{
-			//	// Transparent objects must be rendered after
-			//	if (pMaterial->useAlphaTexture)
-			//	{
-			//		pTransparents->entities.push_back(entityId);
-			//		continue;
-			//	}
+			MaterialComponent* pMaterial = pMaterialManager->GetMaterialByName(pScene, 
+																			   pModel->material);
+			if (pMaterial)
+			{
+				// Transparent objects must be rendered after
+				if (pMaterial->useAlphaTexture)
+				{
+					pTransparents->entities.push_back(entityId);
+					continue;
+				}
 
-			//	pMaterialManager->BindMaterial(pScene, pMaterial->name);
-			//}
-			//else
-			//{
-			//	pMaterialManager->UnbindMaterial();
-			//}
+				pMaterialManager->BindMaterial(pScene, pMaterial->name);
+			}
+			else
+			{
+				pMaterialManager->UnbindMaterial();
+			}
 
 			m_RenderModel(pTiling, pTransform, pModel);
 		}

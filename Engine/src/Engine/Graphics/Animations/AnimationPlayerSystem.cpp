@@ -4,6 +4,7 @@
 
 #include "Engine/ECS/Scene/SceneView.hpp"
 #include "Engine/ECS/Components.h"
+#include "Engine/ECS/SingletonComponents/GraphicsLocator.h"
 
 #include "Engine/Events/EventBusLocator.hpp"
 #include "Engine/Events/AnimationEvent.h"
@@ -18,10 +19,77 @@ namespace MyEngine
 
     void AnimationPlayerSystem::Start(Scene* pScene)
     {
+        AnimationControllerComponent* pAnimController = GraphicsLocator::GetAnimationController();
+
+        // Get the first and last key frame values
+        for (Entity entityId : SceneView<TransformComponent, TransformAnimationComponent>(*pScene))
+        {
+            TransformAnimationComponent* pAnimation = pScene->Get<TransformAnimationComponent>(entityId);
+            
+            for (const PositionKeyFrame& keyframe : pAnimation->positionKeyFrames)
+            {
+                if (keyframe.time < pAnimController->timeFirstKeyFrame)
+                {
+                    pAnimController->timeFirstKeyFrame = keyframe.time;
+                }
+                if (keyframe.time > pAnimController->timeLastKeyFrame)
+                {
+                    pAnimController->timeLastKeyFrame = keyframe.time;
+                }
+            }
+
+            for (const RotationKeyFrame& keyframe : pAnimation->rotationKeyFrames)
+            {
+                if (keyframe.time < pAnimController->timeFirstKeyFrame)
+                {
+                    pAnimController->timeFirstKeyFrame = keyframe.time;
+                }
+                if (keyframe.time > pAnimController->timeLastKeyFrame)
+                {
+                    pAnimController->timeLastKeyFrame = keyframe.time;
+                }
+            }
+
+            for (const ScaleKeyFrame& keyframe : pAnimation->scaleKeyFrames)
+            {
+                if (keyframe.time < pAnimController->timeFirstKeyFrame)
+                {
+                    pAnimController->timeFirstKeyFrame = keyframe.time;
+                }
+                if (keyframe.time > pAnimController->timeLastKeyFrame)
+                {
+                    pAnimController->timeLastKeyFrame = keyframe.time;
+                }
+            }
+        }
     }
 
     void AnimationPlayerSystem::Update(Scene* pScene, float deltaTime)
     {
+        AnimationControllerComponent* pAnimController = GraphicsLocator::GetAnimationController();
+
+        // First reset all animations if needed
+        if (pAnimController->reset)
+        {
+            for (Entity entityId : SceneView<TransformComponent, TransformAnimationComponent>(*pScene))
+            {
+                TransformAnimationComponent* pAnimation = pScene->Get<TransformAnimationComponent>(entityId);
+                
+                // If animation in reverse then go to last frame
+                if (pAnimController->speed < 0)
+                {
+                    pAnimation->time = pAnimController->timeLastKeyFrame;
+                }
+                else
+                {
+                    pAnimation->time = pAnimController->timeFirstKeyFrame;
+                }
+            }
+
+            pAnimController->reset = false;
+        }
+
+        // Then update animation timers
         for (Entity entityId : SceneView<TransformComponent, TransformAnimationComponent>(*pScene))
         {
             TransformAnimationComponent* pAnimation = pScene->Get<TransformAnimationComponent>(entityId);
@@ -29,7 +97,7 @@ namespace MyEngine
             {
                 continue;
             }
-            
+
             int startPos1 = 0;
             int endPos1 = 0;
             int startScale1 = 0;
@@ -51,9 +119,9 @@ namespace MyEngine
             AnimationUtils::GetKeyFrames<RotationKeyFrame>(pAnimation->time, pAnimation->rotationKeyFrames,
 								                           startRot1, endRot1);
 
-            pAnimation->time += deltaTime;
+            pAnimation->time += (deltaTime * pAnimController->speed);
 
-            // Get keyframes fater time increase
+            // Get keyframes after time increase
             AnimationUtils::GetKeyFrames<PositionKeyFrame>(pAnimation->time, pAnimation->positionKeyFrames,
 								                           startPos2, endPos2);
             AnimationUtils::GetKeyFrames<ScaleKeyFrame>(pAnimation->time, pAnimation->scaleKeyFrames,

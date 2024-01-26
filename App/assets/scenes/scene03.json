@@ -12,10 +12,10 @@
                 -284.4228210449219
             ],
             "orientation": [
-                0.5066101551055908,
-                -0.1528509557247162,
-                0.8123474717140198,
-                0.2451004981994629
+                0.5070163011550903,
+                -0.1529735028743744,
+                0.8120941519737244,
+                0.24502407014369965
             ],
             "distance": 0.5,
             "height": 0.0,
@@ -90,6 +90,106 @@
     },
     {
         "tag": {
+            "name": "skybox"
+        },
+        "texture": {
+            "fileName": "textcube",
+            "textureType": 20,
+            "vecTextures": [
+                "cubetexture/TropicalSunnyDayLeft2048.bmp",
+                "cubetexture/TropicalSunnyDayRight2048.bmp",
+                "cubetexture/TropicalSunnyDayDown2048.bmp",
+                "cubetexture/TropicalSunnyDayUp2048.bmp",
+                "cubetexture/TropicalSunnyDayFront2048.bmp",
+                "cubetexture/TropicalSunnyDayBack2048.bmp"
+            ]
+        },
+        "material": {
+            "name": "matcubetext",
+            "alphaTexture": "",
+            "colorTextures": [],
+            "colorTexturesRatios": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "cubeTexture": "textcube",
+            "offset": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "currOffset": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "offsetHeightMap": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "currOffsetHeightMap": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "offsetMove": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "discardTexture": "",
+            "heightMapTexture": "",
+            "heightScale": 0.0,
+            "isEmissive": 0,
+            "normalTexture": "",
+            "specularTexture": "",
+            "useAlphaTexture": 0,
+            "useCubeTexture": 1,
+            "useDiscardTexture": 0,
+            "useHeightMap": 0,
+            "useNormalTexture": 0,
+            "useSpecularTexture": 0
+        }
+    },
+    {
+        "tag": {
+            "name": "skybox"
+        },
+        "transform": {
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "orientation": [
+                1.0,
+                0.0,
+                -0.0,
+                0.0
+            ],
+            "scale": 400.0
+        },
+        "model": {
+            "isActive": 1,
+            "doNotLight": 1,
+            "isWireframe": 0,
+            "useDefaultColor": 0,
+            "defaultColor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "useColorTexture": 1,
+            "material": "matcubetext",
+            "models": [
+                "skybox.ply"
+            ]
+        }
+    },
+    {
+        "tag": {
             "name": "racetrack"
         },
         "transform": {
@@ -159,6 +259,7 @@
         },
         "transformAnimation": {
             "time": 0.0,
+            "isActive": true,
             "positionKeyFrames": [
                 {
                     "time": 0.0,
@@ -328,6 +429,7 @@
         },
         "transformAnimation": {
             "time": 0.0,
+            "isActive": true,
             "positionKeyFrames": [
                 {
                     "time": 0.0,

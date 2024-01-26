@@ -25,7 +25,7 @@
         "width": 1080,
         "fovy": 0.6,
         "zNear": 0.1,
-        "zFar": 100.0
+        "zFar": 1000.0
     },
     "defaultPaths": {
         "pathAudio": "assets/audios/",
