@@ -54,6 +54,15 @@ namespace MyEngine
 		iEventBus<eInputEvents, KeyboardEvent>* pEventBus = EventBusLocator<eInputEvents, KeyboardEvent>::Get();
 
 		pEventBus->Unsubscribe(eInputEvents::KEYBOARD, InputTriggered);
+
+		// Key frame events
+		iEventBus<eAnimationEvents, ScaleKeyFrameEvent>* pEventBusSKF = EventBusLocator<eAnimationEvents, ScaleKeyFrameEvent>::Get();
+
+		pEventBusSKF->Unsubscribe(eAnimationEvents::SCALE_KEYFRAME, ScaleKeyFrameTriggered);
+
+		iEventBus<eAnimationEvents, PositionKeyFrameEvent>* pEventBusPKF = EventBusLocator<eAnimationEvents, PositionKeyFrameEvent>::Get();
+
+		pEventBusPKF->Unsubscribe(eAnimationEvents::POSITION_KEYFRAME, PositionKeyFrameTriggered);
 	}
 
 	void AnimationCommandsSystem::InputTriggered(const KeyboardEvent& event)

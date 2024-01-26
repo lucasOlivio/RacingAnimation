@@ -31,29 +31,18 @@ namespace MyEngine
             TransformAnimationComponent* pAnimation = pScene->Get<TransformAnimationComponent>(entityId);
 
             float currTime = pAnimation->time;
-            int startIndex = 0;
-            int endIndex = 0;
 
             // Position
-            AnimationUtils::GetKeyFrames<PositionKeyFrame>(currTime, pAnimation->positionKeyFrames,
-								                           startIndex, endIndex);
-
             AnimationUtils::InterpolateAndApply<PositionKeyFrame, glm::vec3>(pAnimation->positionKeyFrames, 
-                                                      currTime, startIndex, endIndex, pTransform->position);
+                                                      currTime, pAnimation->currStartPosKF, pAnimation->currEndPosKF, pTransform->position);
 
             // Rotation
-            AnimationUtils::GetKeyFrames<RotationKeyFrame>(currTime, pAnimation->rotationKeyFrames,
-								                           startIndex, endIndex);
-
             AnimationUtils::InterpolateAndApply<RotationKeyFrame, glm::quat>(pAnimation->rotationKeyFrames, 
-                                                      currTime, startIndex, endIndex, pTransform->orientation);
+                                                      currTime, pAnimation->currStartRotKF, pAnimation->currEndRotKF, pTransform->orientation);
 
             // Scale
-            AnimationUtils::GetKeyFrames<ScaleKeyFrame>(currTime, pAnimation->scaleKeyFrames,
-								                           startIndex, endIndex);
-
             AnimationUtils::InterpolateAndApply<ScaleKeyFrame, float>(pAnimation->scaleKeyFrames, 
-                                                      currTime, startIndex, endIndex, pTransform->scale);
+                                                      currTime, pAnimation->currStartScaKF, pAnimation->currEndScaKF, pTransform->scale);
         }
     }
 

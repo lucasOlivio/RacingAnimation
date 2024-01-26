@@ -164,6 +164,15 @@ namespace MyEngine
 		std::vector<ScaleKeyFrame> scaleKeyFrames;
 		std::vector<RotationKeyFrame> rotationKeyFrames;
 
+		int currStartPosKF = -1;
+		int currEndPosKF = -1;
+
+		int currStartRotKF = -1;
+		int currEndRotKF = -1;
+
+		int currStartScaKF = -1;
+		int currEndScaKF = -1;
+
 		float time;
 		bool isActive;
 	};

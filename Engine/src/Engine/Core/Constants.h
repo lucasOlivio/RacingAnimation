@@ -31,7 +31,9 @@ namespace MyEngine
 	const int   FRAME_RATE = 60;  // Frames per second
 	const float FRAME_DURATION = 1.0f / (float)FRAME_RATE;
 
+	const glm::vec4 WHITE = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
 	const glm::vec4 RED = glm::vec4(1.0f, 0.0f, 0.0f, 1.0f);
 	const glm::vec4 GREEN = glm::vec4(0.0f, 1.0f, 0.0f, 1.0f);
 	const glm::vec4 BLUE = glm::vec4(0.0f, 0.0f, 1.0f, 1.0f);
+	const glm::vec4 YELLOW = glm::vec4(0.0f, 1.0f, 1.0f, 1.0f);
 }

@@ -21,11 +21,11 @@ namespace MyEngine
     {
         AnimationControllerComponent* pAnimController = GraphicsLocator::GetAnimationController();
 
-        // Get the first and last key frame values
+        // Get the first and last key frame values and reset animations keyframes
         for (Entity entityId : SceneView<TransformComponent, TransformAnimationComponent>(*pScene))
         {
             TransformAnimationComponent* pAnimation = pScene->Get<TransformAnimationComponent>(entityId);
-            
+
             for (const PositionKeyFrame& keyframe : pAnimation->positionKeyFrames)
             {
                 if (keyframe.time < pAnimController->timeFirstKeyFrame)
@@ -128,6 +128,14 @@ namespace MyEngine
 								                           startScale2, endScale2);
             AnimationUtils::GetKeyFrames<RotationKeyFrame>(pAnimation->time, pAnimation->rotationKeyFrames,
 								                           startRot2, endRot2);
+
+            // Set current keyframes
+            pAnimation->currStartPosKF = startPos2;
+            pAnimation->currStartRotKF = startRot2;
+            pAnimation->currStartScaKF = startScale2;
+            pAnimation->currEndPosKF = endPos2;
+            pAnimation->currEndRotKF = endRot2;
+            pAnimation->currEndScaKF = endScale2;
 
             // Check if passed frame and if is event frame
             if (endPos1 > -1 && pAnimation->positionKeyFrames[endPos1].isKeyEvent)

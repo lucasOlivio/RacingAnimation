@@ -5,6 +5,7 @@
 
 // Custom app systems
 #include "Gameplay/AnimationCommandsSystem.h"
+#include "Gameplay/AnimationColorsSystem.h"
 
 // Here we use to include all we need for this specific app details to work
 namespace MyEngine
@@ -17,6 +18,7 @@ namespace MyEngine
 
 		// Register custom app systems
 		SystemBuilder::RegisterSystem("AnimationCommandsSystem", []() { return new AnimationCommandsSystem; });
+		SystemBuilder::RegisterSystem("AnimationColorsSystem", []() { return new AnimationColorsSystem; });
 
 		GameStateComponent* pStates = CoreLocator::GetGameState();
 
@@ -33,6 +35,7 @@ namespace MyEngine
 		pStates->mainSystems.push_back("AnimationSystem");
 
 		pStates->mainSystems.push_back("AnimationCommandsSystem");
+		pStates->mainSystems.push_back("AnimationColorsSystem");
 
 		// TODO: This could come from a config file
 		// TODO: Could this be categorized to avoid having to put all in the config?
