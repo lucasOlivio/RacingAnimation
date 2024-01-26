@@ -12,10 +12,10 @@
                 180.69888305664063
             ],
             "orientation": [
-                0.990950882434845,
-                -0.08345136791467667,
-                -0.1047586053609848,
-                -0.008819902315735817
+                0.9900956153869629,
+                -0.08387798815965652,
+                -0.11218295246362686,
+                -0.009501632302999496
             ],
             "distance": 0.5,
             "height": 0.0,
@@ -453,6 +453,240 @@
                     ]
                 }
             ]
+        }
+    },
+    {
+        "tag": {
+            "name": "RaceLight-RED"
+        },
+        "transform": {
+            "position": [
+                31.0,
+                21.0,
+                160.0
+            ],
+            "orientation": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": 0.0
+        },
+        "model": {
+            "isActive": 1,
+            "doNotLight": 1,
+            "isWireframe": 0,
+            "useDefaultColor": 1,
+            "defaultColor": [
+                1.0,
+                0.0,
+                0.0
+            ],
+            "useColorTexture": 0,
+            "material": "",
+            "models": [
+                "sphere.obj"
+            ]
+        },
+        "transformAnimation": {
+            "time": 0.0,
+            "positionKeyFrames": [],
+            "scaleKeyFrames": [
+                {
+                    "time": 0.0,
+                    "easeType": 1,
+                    "isKeyEvent": false,
+                    "value": 0.0
+                },
+                {
+                    "time": 1.0,
+                    "easeType": 1,
+                    "isKeyEvent": false,
+                    "value": 2.0
+                },
+                {
+                    "time": 2.0,
+                    "easeType": 1,
+                    "isKeyEvent": false,
+                    "value": 2.0
+                },
+                {
+                    "time": 3.0,
+                    "easeType": 1,
+                    "isKeyEvent": false,
+                    "value": 2.0
+                },
+                {
+                    "time": 3.5,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": 2.0
+                },
+                {
+                    "time": 4.0,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": 0.0
+                }
+            ],
+            "rotationKeyFrames": []
+        }
+    },
+    {
+        "tag": {
+            "name": "RaceLight-YELLOW"
+        },
+        "transform": {
+            "position": [
+                36.0,
+                21.299999237060547,
+                162.0
+            ],
+            "orientation": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": 0.0
+        },
+        "model": {
+            "isActive": 1,
+            "doNotLight": 1,
+            "isWireframe": 0,
+            "useDefaultColor": 1,
+            "defaultColor": [
+                1.0,
+                1.0,
+                0.0
+            ],
+            "useColorTexture": 0,
+            "material": "",
+            "models": [
+                "sphere.obj"
+            ]
+        },
+        "transformAnimation": {
+            "time": 0.0,
+            "positionKeyFrames": [],
+            "scaleKeyFrames": [
+                {
+                    "time": 0.0,
+                    "easeType": 2,
+                    "isKeyEvent": false,
+                    "value": 0.0
+                },
+                {
+                    "time": 1.0,
+                    "easeType": 2,
+                    "isKeyEvent": false,
+                    "value": 0.0
+                },
+                {
+                    "time": 2.0,
+                    "easeType": 2,
+                    "isKeyEvent": false,
+                    "value": 2.0
+                },
+                {
+                    "time": 3.0,
+                    "easeType": 2,
+                    "isKeyEvent": false,
+                    "value": 2.0
+                },
+                {
+                    "time": 3.5,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": 2.0
+                },
+                {
+                    "time": 4.0,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": 0.0
+                }
+            ],
+            "rotationKeyFrames": []
+        }
+    },
+    {
+        "tag": {
+            "name": "RaceLight-GREEN"
+        },
+        "transform": {
+            "position": [
+                41.0,
+                21.299999237060547,
+                163.0
+            ],
+            "orientation": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": 0.0
+        },
+        "model": {
+            "isActive": 1,
+            "doNotLight": 1,
+            "isWireframe": 0,
+            "useDefaultColor": 1,
+            "defaultColor": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "useColorTexture": 0,
+            "material": "",
+            "models": [
+                "sphere.obj"
+            ]
+        },
+        "transformAnimation": {
+            "time": 0.0,
+            "positionKeyFrames": [],
+            "scaleKeyFrames": [
+                {
+                    "time": 0.0,
+                    "easeType": 3,
+                    "isKeyEvent": false,
+                    "value": 0.0
+                },
+                {
+                    "time": 1.0,
+                    "easeType": 3,
+                    "isKeyEvent": false,
+                    "value": 0.0
+                },
+                {
+                    "time": 2.0,
+                    "easeType": 3,
+                    "isKeyEvent": false,
+                    "value": 0.0
+                },
+                {
+                    "time": 3.0,
+                    "easeType": 3,
+                    "isKeyEvent": true,
+                    "value": 2.0
+                },
+                {
+                    "time": 3.5,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": 2.0
+                },
+                {
+                    "time": 4.0,
+                    "easeType": 0,
+                    "isKeyEvent": false,
+                    "value": 0.0
+                }
+            ],
+            "rotationKeyFrames": []
         }
     }
 ]

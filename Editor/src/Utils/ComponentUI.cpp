@@ -6,6 +6,8 @@
 
 #include "Engine/ECS/Components.h"
 
+#include "Engine/Graphics/VAO/VAOManagerLocator.h"
+
 namespace MyEngine
 {
     std::map<ComponentId, ComponentUIHandler> ComponentUI::m_componentsUI = {};
@@ -351,6 +353,7 @@ namespace MyEngine
 
     void ComponentUI::m_ModelUI(Scene* pScene, Entity entityId)
     {
+        iVAOManager* pVAOManager = VAOManagerLocator::Get();
         ImGui::Text("Model:");
 
         ModelComponent* pModel = pScene->Get<ModelComponent>(entityId);
@@ -363,12 +366,26 @@ namespace MyEngine
         ImGui::Text("Models");
         for (size_t i = 0; i < pModel->models.size(); ++i)
         {
-            ImGui::InputText(("##Model" + std::to_string(i)).c_str(), &pModel->models[i]);
+            if (ImGui::InputText(("##Model" + std::to_string(i)).c_str(), &pModel->models[i]))
+            {
+                sMesh* pMesh = pVAOManager->LoadModelIntoVAO(pModel->models[i], false);
+                if (!pMesh)
+                {
+                    continue;
+                }
+                pModel->pMeshes[i] = pMesh;
+            }
         }
 
         if (ImGui::Button("Add Mesh"))
         {
-            pModel->models.push_back("cube.ply"); // You can set a default path or leave it empty
+            pModel->models.push_back("cube.ply");
+            
+            sMesh* pMesh = pVAOManager->LoadModelIntoVAO(pModel->models.back(), false);
+            if (pMesh)
+            {
+                pModel->pMeshes.push_back(pMesh);
+            }
         }
 
         // Color

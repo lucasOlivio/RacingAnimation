@@ -96,7 +96,7 @@ namespace MyEngine
 			TransformComponent* pTransform = pScene->Get<TransformComponent>(entityId);
 			TilingComponent* pTiling = pScene->Get<TilingComponent>(entityId);
 
-			if (!pModel->isActive)
+			if (!pModel->isActive || pModel->pMeshes.size() == 0)
 			{
 				continue;
 			}

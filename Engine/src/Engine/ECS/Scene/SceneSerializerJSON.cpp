@@ -505,9 +505,9 @@ namespace MyEngine
             scaleKeyFrameObject.AddMember("isKeyEvent", scaleKeyFrame.isKeyEvent, allocator);
 
             // Serialize scale value
-            Value scaleValueArray(kArrayType);
-            scaleValueArray.PushBack(scaleKeyFrame.value, allocator);
-            scaleKeyFrameObject.AddMember("value", scaleValueArray, allocator);
+            Value scaleValue(kNumberType);
+            scaleValue = scaleKeyFrame.value;
+            scaleKeyFrameObject.AddMember("value", scaleValue, allocator);
 
             scaleKeyFramesArray.PushBack(scaleKeyFrameObject, allocator);
         }
