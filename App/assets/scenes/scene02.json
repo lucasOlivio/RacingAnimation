@@ -354,7 +354,7 @@
                 {
                     "time": 2.25,
                     "easeType": 0,
-                    "isKeyEvent": false,
+                    "isKeyEvent": true,
                     "value": [
                         -40.0,
                         20.0,
@@ -586,7 +586,7 @@
                 {
                     "time": 2.25,
                     "easeType": 0,
-                    "isKeyEvent": false,
+                    "isKeyEvent": true,
                     "value": [
                         -30.0,
                         20.0,

@@ -225,7 +225,7 @@
     },
     {
         "tag": {
-            "name": "raceship1"
+            "name": "raceship2"
         },
         "transform": {
             "position": [
@@ -284,7 +284,7 @@
                 {
                     "time": 1.25,
                     "easeType": 0,
-                    "isKeyEvent": true,
+                    "isKeyEvent": false,
                     "value": [
                         20.0,
                         20.0,
@@ -294,7 +294,7 @@
                 {
                     "time": 1.5,
                     "easeType": 0,
-                    "isKeyEvent": true,
+                    "isKeyEvent": false,
                     "value": [
                         5.0,
                         20.0,
@@ -401,7 +401,7 @@
                 {
                     "time": 1.25,
                     "easeType": 0,
-                    "isKeyEvent": true,
+                    "isKeyEvent": false,
                     "value": [
                         25.0,
                         20.0,

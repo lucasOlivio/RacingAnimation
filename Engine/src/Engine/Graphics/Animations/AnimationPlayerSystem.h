@@ -4,6 +4,9 @@
 
 namespace MyEngine
 {
+	// TODO: This could be all just transform, not separated by "position, rotation scale",
+	// this way gets too much repetition
+	// 
 	// Handles the time for all animations and key frame events triggering, 
 	// decoupled from animation system to allow more options on how to run the animations
 	class AnimationPlayerSystem : public iSystem
@@ -27,8 +30,14 @@ namespace MyEngine
 		virtual void Shutdown();
 
 	private:
-		void m_TriggerPosKeyFrameEvent(int oldKeyFrame, int keyFrame, int nextKeyFrame);
-		void m_TriggerRotKeyFrameEvent(int oldKeyFrame, int keyFrame, int nextKeyFrame);
-		void m_TriggerScaleKeyFrameEvent(int oldKeyFrame, int keyFrame, int nextKeyFrame);
+		void m_TriggerPosKeyFrameEvent(Entity entityId, Scene* pScene,
+										int oldKeyFrame, 
+										int keyFrame, int nextKeyFrame);
+		void m_TriggerRotKeyFrameEvent(Entity entityId, Scene* pScene,
+										int oldKeyFrame, 
+										int keyFrame, int nextKeyFrame);
+		void m_TriggerScaleKeyFrameEvent(Entity entityId, Scene* pScene,
+										int oldKeyFrame, 
+										int keyFrame, int nextKeyFrame);
 	};
 }

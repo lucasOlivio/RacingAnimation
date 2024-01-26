@@ -484,7 +484,7 @@
                 {
                     "time": 3.5,
                     "easeType": 0,
-                    "isKeyEvent": false,
+                    "isKeyEvent": true,
                     "value": [
                         -27.0,
                         21.0,

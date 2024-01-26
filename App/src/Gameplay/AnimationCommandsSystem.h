@@ -3,10 +3,11 @@
 #include "Engine/ECS/System/iSystem.h"
 
 #include "Engine/Events/InputEvent.h"
+#include "Engine/Events/AnimationEvent.h"
 
 namespace MyEngine
 {
-	// Handles all controls for animations
+	// Handles all custom controls for animations
 	class AnimationCommandsSystem : public iSystem
 	{
 	public:
@@ -28,6 +29,12 @@ namespace MyEngine
 		virtual void Shutdown();
 
 		static void InputTriggered(const KeyboardEvent& event);
+
+		// Activates racing ships
+		static void ScaleKeyFrameTriggered(const ScaleKeyFrameEvent& event);
+
+		// Go to next scene
+		static void PositionKeyFrameTriggered(const PositionKeyFrameEvent& event);
 
 	private:
 		static void m_ToggleState();

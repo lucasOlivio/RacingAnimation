@@ -134,7 +134,7 @@ namespace MyEngine
             {
                 if (startPos1 != endPos2 && endPos1 == startPos2)
                 {
-                    m_TriggerPosKeyFrameEvent(startPos1, endPos1, endPos2);
+                    m_TriggerPosKeyFrameEvent(entityId, pScene, startPos1, endPos1, endPos2);
                 }
             }
 
@@ -142,7 +142,7 @@ namespace MyEngine
             {
                 if (startScale1 != endScale2 && endScale1 == startScale2)
                 {
-                    m_TriggerScaleKeyFrameEvent(startScale1, endScale1, endScale2);
+                    m_TriggerScaleKeyFrameEvent(entityId, pScene, startScale1, endScale1, endScale2);
                 }
             }
 
@@ -150,7 +150,7 @@ namespace MyEngine
             {
                 if (startRot1 != endRot2 && endRot1 == startRot2)
                 {
-                    m_TriggerRotKeyFrameEvent(startRot1, endRot1, endRot2);
+                    m_TriggerRotKeyFrameEvent(entityId, pScene, startRot1, endRot1, endRot2);
                 }
             }
         }
@@ -168,33 +168,45 @@ namespace MyEngine
     {
     }
 
-    void AnimationPlayerSystem::m_TriggerPosKeyFrameEvent(int oldKeyFrame, int keyFrame, int nextKeyFrame)
+    void AnimationPlayerSystem::m_TriggerPosKeyFrameEvent(Entity entityId, Scene* pScene,
+        int oldKeyFrame,
+        int keyFrame, int nextKeyFrame)
     {
         iEventBus<eAnimationEvents, PositionKeyFrameEvent>* pEventBus = EventBusLocator<eAnimationEvents, PositionKeyFrameEvent>::Get();
 
         PositionKeyFrameEvent keyEvent = PositionKeyFrameEvent();
+        keyEvent.entityId = entityId;
+        keyEvent.pScene = pScene;
         keyEvent.oldKeyFrame = oldKeyFrame;
         keyEvent.keyFrame = keyFrame;
         keyEvent.nextKeyFrame = nextKeyFrame;
         pEventBus->Publish(keyEvent);
     }
 
-    void AnimationPlayerSystem::m_TriggerRotKeyFrameEvent(int oldKeyFrame, int keyFrame, int nextKeyFrame)
+    void AnimationPlayerSystem::m_TriggerRotKeyFrameEvent(Entity entityId, Scene* pScene,
+        int oldKeyFrame,
+        int keyFrame, int nextKeyFrame)
     {
         iEventBus<eAnimationEvents, RotationKeyFrameEvent>* pEventBus = EventBusLocator<eAnimationEvents, RotationKeyFrameEvent>::Get();
 
         RotationKeyFrameEvent keyEvent = RotationKeyFrameEvent();
+        keyEvent.entityId = entityId;
+        keyEvent.pScene = pScene;
         keyEvent.oldKeyFrame = oldKeyFrame;
         keyEvent.keyFrame = keyFrame;
         keyEvent.nextKeyFrame = nextKeyFrame;
         pEventBus->Publish(keyEvent);
     }
 
-    void AnimationPlayerSystem::m_TriggerScaleKeyFrameEvent(int oldKeyFrame, int keyFrame, int nextKeyFrame)
+    void AnimationPlayerSystem::m_TriggerScaleKeyFrameEvent(Entity entityId, Scene* pScene,
+										                  int oldKeyFrame, 
+										                  int keyFrame, int nextKeyFrame)
     {
         iEventBus<eAnimationEvents, ScaleKeyFrameEvent>* pEventBus = EventBusLocator<eAnimationEvents, ScaleKeyFrameEvent>::Get();
 
         ScaleKeyFrameEvent keyEvent = ScaleKeyFrameEvent();
+        keyEvent.entityId = entityId;
+        keyEvent.pScene = pScene;
         keyEvent.oldKeyFrame = oldKeyFrame;
         keyEvent.keyFrame = keyFrame;
         keyEvent.nextKeyFrame = nextKeyFrame;

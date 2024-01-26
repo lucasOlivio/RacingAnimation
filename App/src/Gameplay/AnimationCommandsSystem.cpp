@@ -21,6 +21,15 @@ namespace MyEngine
 		iEventBus<eInputEvents, KeyboardEvent>* pEventBus = EventBusLocator<eInputEvents, KeyboardEvent>::Get();
 
 		pEventBus->Subscribe(eInputEvents::KEYBOARD, InputTriggered);
+
+		// Key frame events
+		iEventBus<eAnimationEvents, ScaleKeyFrameEvent>* pEventBusSKF = EventBusLocator<eAnimationEvents, ScaleKeyFrameEvent>::Get();
+
+		pEventBusSKF->Subscribe(eAnimationEvents::SCALE_KEYFRAME, ScaleKeyFrameTriggered);
+
+		iEventBus<eAnimationEvents, PositionKeyFrameEvent>* pEventBusPKF = EventBusLocator<eAnimationEvents, PositionKeyFrameEvent>::Get();
+
+		pEventBusPKF->Subscribe(eAnimationEvents::POSITION_KEYFRAME, PositionKeyFrameTriggered);
 	}
 
 	void AnimationCommandsSystem::Start(Scene* pScene)
@@ -109,6 +118,40 @@ namespace MyEngine
 		}
 	}
 
+	void AnimationCommandsSystem::ScaleKeyFrameTriggered(const ScaleKeyFrameEvent& event)
+	{
+		TagComponent* pTag = event.pScene->Get<TagComponent>(event.entityId);
+
+		if (pTag && pTag->name != "RaceLight-GREEN")
+		{
+			return;
+		}
+
+		// If event from green light, activate race cars animations
+		for (Entity entityId : SceneView<TagComponent, TransformAnimationComponent>(*(event.pScene)))
+		{
+			TagComponent* pTagRace = event.pScene->Get<TagComponent>(entityId);
+			TransformAnimationComponent* pAnimation = event.pScene->Get<TransformAnimationComponent>(entityId);
+
+			if (pTagRace->name == "raceship1" || pTagRace->name == "raceship2")
+			{
+				pAnimation->isActive = true;
+			}
+		}
+	}
+
+	void AnimationCommandsSystem::PositionKeyFrameTriggered(const PositionKeyFrameEvent& event)
+	{
+		TagComponent* pTag = event.pScene->Get<TagComponent>(event.entityId);
+
+		if (pTag && pTag->name != "raceship1")
+		{
+			return;
+		}
+
+		m_NextScene(1);
+	}
+
 	void AnimationCommandsSystem::m_ToggleState()
 	{
 		GameStateComponent* pState = CoreLocator::GetGameState();
@@ -144,7 +187,7 @@ namespace MyEngine
 		}
 		else if(sceneIndex >= SCENES_LIST.size())
 		{
-			sceneIndex = SCENES_LIST.size() - 1;
+			sceneIndex = (int)(SCENES_LIST.size() - 1);
 		}
 
 		currScene = SCENES_LIST[sceneIndex];
