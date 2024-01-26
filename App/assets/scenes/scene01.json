@@ -259,6 +259,7 @@
         },
         "transformAnimation": {
             "time": 0.0,
+            "isActive": false,
             "positionKeyFrames": [
                 {
                     "time": 0.0,
@@ -375,6 +376,7 @@
         },
         "transformAnimation": {
             "time": 0.0,
+            "isActive": false,
             "positionKeyFrames": [
                 {
                     "time": 0.0,
@@ -491,6 +493,7 @@
         },
         "transformAnimation": {
             "time": 0.0,
+            "isActive": true,
             "positionKeyFrames": [],
             "scaleKeyFrames": [
                 {
@@ -569,6 +572,7 @@
         },
         "transformAnimation": {
             "time": 0.0,
+            "isActive": true,
             "positionKeyFrames": [],
             "scaleKeyFrames": [
                 {
@@ -647,6 +651,7 @@
         },
         "transformAnimation": {
             "time": 0.0,
+            "isActive": true,
             "positionKeyFrames": [],
             "scaleKeyFrames": [
                 {

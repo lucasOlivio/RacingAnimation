@@ -321,8 +321,8 @@ namespace MyEngine
     {
         // TODO: Resources (materialmanager uses material component directly)
         //  should be separated from scenes before we can delete scenes
-        /*iSceneManager* pSceneManager = SceneManagerLocator::Get();
-        pSceneManager->ClearDeletedScenes();*/
+        iSceneManager* pSceneManager = SceneManagerLocator::Get();
+        pSceneManager->ClearDeletedScenes();
         m_pCurrentScene->m_DestroyEntities();
     }
 

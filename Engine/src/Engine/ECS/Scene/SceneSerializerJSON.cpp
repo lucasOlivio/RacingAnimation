@@ -474,6 +474,7 @@ namespace MyEngine
 
         // Serialize time
         jsonObject.AddMember("time", animationIn.time, allocator);
+        jsonObject.AddMember("isActive", animationIn.isActive, allocator);
 
         // Serialize position keyframes
         Value positionKeyFramesArray(kArrayType);
@@ -1022,6 +1023,12 @@ namespace MyEngine
             keyFrame.easeType = (eEasingType)type;
 
             animationOut.scaleKeyFrames.push_back(keyFrame);
+        }
+
+        if (jsonObject.HasMember("isActive"))
+        {
+            Value& activeObj = jsonObject["isActive"];
+            parser.GetValue(activeObj, animationOut.isActive);
         }
 
         return true;

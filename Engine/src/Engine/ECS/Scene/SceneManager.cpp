@@ -74,14 +74,16 @@ namespace MyEngine
 	{
 		Scene* pNewScene = GetScene(newSceneName);
 		itScenes it = m_mapScenes.find(newSceneName);
-		if (reload || !pNewScene)
-		{
-			if (pNewScene)
-			{
-				// Scene already loaded, so we mark to deletion
-				m_pScenesToDelete.push_back(pNewScene);
-			}
 
+		if (pNewScene && reload)
+		{
+			// Scene already loaded, so we mark to deletion
+			m_pScenesToDelete.push_back(pNewScene);
+			pNewScene = nullptr;
+		}
+		
+		if (!pNewScene)
+		{
 			pNewScene = LoadScene(newSceneName);
 			m_mapScenes[newSceneName] = pNewScene;
 		}

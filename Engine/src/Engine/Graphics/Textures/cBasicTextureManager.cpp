@@ -276,6 +276,13 @@ namespace MyEngine
 		std::string posZ_fileName, std::string negZ_fileName,
 		bool bIsSeamless, std::string& errorString)
 	{
+		GLuint textID = GetTextureIDFromName(cubeMapName);
+		if (textID > 0)
+		{
+			// Texture already exists
+			return true;
+		}
+
 		std::string posX_fileName_FullPath = m_basePath + "/" + posX_fileName;
 		std::string negX_fileName_FullPath = m_basePath + "/" + negX_fileName;
 		std::string posY_fileName_FullPath = m_basePath + "/" + posY_fileName;

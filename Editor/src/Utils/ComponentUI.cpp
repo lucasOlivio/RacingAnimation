@@ -421,6 +421,7 @@ namespace MyEngine
 
         // Edit time
         ImGui::InputFloat("Time", &pTransformAnimation->time);
+        ImGui::Checkbox("Is Active##AnimationIsActive", &pTransformAnimation->isActive);
 
         // Edit position keyframes
         ImGui::Text("Position Keyframes:");

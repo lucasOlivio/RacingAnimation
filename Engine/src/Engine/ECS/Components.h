@@ -165,6 +165,7 @@ namespace MyEngine
 		std::vector<RotationKeyFrame> rotationKeyFrames;
 
 		float time;
+		bool isActive;
 	};
 
 	struct GravityComponent

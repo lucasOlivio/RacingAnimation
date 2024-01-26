@@ -25,6 +25,10 @@ namespace MyEngine
         for (Entity entityId : SceneView<TransformComponent, TransformAnimationComponent>(*pScene))
         {
             TransformAnimationComponent* pAnimation = pScene->Get<TransformAnimationComponent>(entityId);
+            if (!pAnimation->isActive)
+            {
+                continue;
+            }
             
             int startPos1 = 0;
             int endPos1 = 0;

@@ -20,7 +20,9 @@ namespace MyEngine
 		virtual void DeleteMaterial(Scene* pScene, std::string materialName);
 
 	private:
-		std::map<std::string, MaterialComponent*> m_materials;
+		// TODO: For now just store copies so we can delete scenes and avoid leaks,
+		// but this should be completely separated from scene
+		std::map<std::string, MaterialComponent> m_materials;
 
 		// Textures and variables in the uniforms and units at the moment
 		std::string m_currMaterial;
