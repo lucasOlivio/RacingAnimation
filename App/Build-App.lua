@@ -32,7 +32,7 @@ project "App"
 
    postbuildcommands
    {
-       "{COPY} ../Engine/Extern/fmod/lib/*.dll %{cfg.buildtarget.directory}"
+       '{COPY} ../Engine/Extern/fmod/lib/*.dll "%{cfg.buildtarget.directory} "'
    }
 
    targetdir ("../bin/" .. OutputDir .. "/%{prj.name}")
@@ -44,7 +44,7 @@ project "App"
 
        postbuildcommands
        {
-           "xcopy assets\\ %{cfg.buildtarget.directory}\\assets\\ /S /E /I /Y"
+           'xcopy assets\\ "%{cfg.buildtarget.directory}\\assets\\ " /S /E /I /Y'
        }
 
    filter "configurations:Debug"
@@ -54,7 +54,7 @@ project "App"
 
        postbuildcommands
        {
-           "{COPY} ../Engine/Extern/assimp/lib/Debug/*.dll %{cfg.buildtarget.directory}"
+           '{COPY} ../Engine/Extern/assimp/lib/Debug/*.dll "%{cfg.buildtarget.directory} "'
        }
 
    filter "configurations:Release"
@@ -65,7 +65,7 @@ project "App"
 
        postbuildcommands
        {
-           "{COPY} ../Engine/Extern/assimp/lib/Release/*.dll %{cfg.buildtarget.directory}"
+           '{COPY} ../Engine/Extern/assimp/lib/Release/*.dll "%{cfg.buildtarget.directory} "'
        }
 
    filter "configurations:Dist"
@@ -76,5 +76,5 @@ project "App"
 
        postbuildcommands
        {
-           "{COPY} ../Engine/Extern/assimp/lib/Release/*.dll %{cfg.buildtarget.directory}"
+           '{COPY} ../Engine/Extern/assimp/lib/Release/*.dll "%{cfg.buildtarget.directory} "'
        }
